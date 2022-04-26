@@ -1,0 +1,21 @@
+img {
+  width: 100%;
+}
+#main {
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+  padding: 2rem;
+}
+
+.billede {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
