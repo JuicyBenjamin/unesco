@@ -1,3 +1,7 @@
+<head>
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/unesco.css">
+</head>
+
 <?php
 /**
  * The template for displaying all single posts
@@ -79,11 +83,5 @@ get_header();
 	</script>
 </section>
 
-<style>
-	#main {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-	}
-</style>
 <?php
 get_footer();
