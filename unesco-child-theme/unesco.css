@@ -20,3 +20,11 @@ article {
   flex-direction: column;
   justify-content: start;
 }
+
+.loading {
+  margin: auto;
+  text-align: center;
+  size: 4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}

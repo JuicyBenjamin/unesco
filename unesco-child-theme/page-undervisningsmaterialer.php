@@ -25,37 +25,49 @@ get_header();
 <section id="primary" class="content-area">
 	<main id="main" class="site-main">
 		<section id="materiale-container">
-		<p>Min egen tekst på tema</p>
+		<p class="loading">Henter indhold</p>
 		</section>
 	</main>
 	<script>
-		const url = "https://vinterfjell.dk/kea/09_cms/unesco/wp-json/wp/v2/posts?categories=36&_embed";
 
 		document.addEventListener("DOMContentLoaded", start);
+
+		const url = "https://vinterfjell.dk/kea/09_cms/unesco/wp-json/wp/v2/posts?categories=36&_embed";
 		let skoletrin;
 		let filter = "alle";
+		let skoletrinSomKanFiltreres = [];
+		
 
 		function start() {
 			const filterKnapper = document.querySelectorAll("div button");
-			filterKnapper.forEach((knap) => knap.addEventListener("click", filtrerskoletrin));
+			filterKnapper.forEach((knap) => knap.addEventListener("click", filtrerSkoletrin));
 			loadJSON();
 		}
 
-		function filtrerskoletrin() {
+		function filtrerSkoletrin() {
 			filter = this.dataset.kategori;
 			document.querySelector(".valgt").classList.remove("valgt");
 			this.classList.add("valgt");
-			visskoletrin();
+			visSkoletrin();
 		}
 
 		async function loadJSON() {
 			const JSONData = await fetch(url);
 			skoletrin = await JSONData.json();
+
+			// Tilføjer kategorierne til array'en skoletrinSomKanFiltreres. Udelukker kategorien "Undervisningsmaterialer" som har id af 36.
+			skoletrin.forEach((post) => {
+				post.categories.forEach((category) => {
+					if (!skoletrinSomKanFiltreres.includes(category) && category != 36){
+						skoletrinSomKanFiltreres.push(category)
+					}
+				})
+			});
 			console.log(skoletrin);
-			visskoletrin();
+			visSkoletrin();
 		}
 
-		function visskoletrin() {
+		function visSkoletrin() {
 			const main = document.querySelector("main");
 			const template = document.querySelector("template").content;
 			main.textContent = "";
@@ -70,7 +82,7 @@ get_header();
 				// 	klon
 				// 		.querySelector("article")
 				// 		.addEventListener("click", () => visOpskrift(kategorier));
-				 	main.appendChild(klon);
+				main.appendChild(klon);
 				// }
 			//};
 		})};
