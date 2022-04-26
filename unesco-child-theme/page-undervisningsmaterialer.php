@@ -23,6 +23,7 @@ get_header();
 	</article>
 </template>
 <section id="primary" class="content-area">
+	<div class="knapContainer">Her skulle Knapper være</div>
 	<main id="main" class="site-main">
 		<section id="materiale-container">
 		<p class="loading">Henter indhold</p>
@@ -30,27 +31,13 @@ get_header();
 	</main>
 	<script>
 
-		document.addEventListener("DOMContentLoaded", start);
+		document.addEventListener("DOMContentLoaded", loadJSON);
 
 		const url = "https://vinterfjell.dk/kea/09_cms/unesco/wp-json/wp/v2/posts?categories=36&_embed";
 		let skoletrin;
 		let filter = "alle";
 		let skoletrinSomKanFiltreres = [];
 		
-
-		function start() {
-			const filterKnapper = document.querySelectorAll("div button");
-			filterKnapper.forEach((knap) => knap.addEventListener("click", filtrerSkoletrin));
-			loadJSON();
-		}
-
-		function filtrerSkoletrin() {
-			filter = this.dataset.kategori;
-			document.querySelector(".valgt").classList.remove("valgt");
-			this.classList.add("valgt");
-			visSkoletrin();
-		}
-
 		async function loadJSON() {
 			const JSONData = await fetch(url);
 			skoletrin = await JSONData.json();
@@ -60,10 +47,29 @@ get_header();
 				post.categories.forEach((category) => {
 					if (!skoletrinSomKanFiltreres.includes(category) && category != 36){
 						skoletrinSomKanFiltreres.push(category)
-					}
+						}
 				})
 			});
 			console.log(skoletrin);
+			tilfojKnapper();
+			visSkoletrin();
+		}
+
+		function tilfojKnapper() {
+			let knapContainer = document.querySelector(".knapContainer");
+			skoletrinSomKanFiltreres.forEach((kategori) => {
+				const btn = document.createElement("button")
+				btn.addEventListener("click", filtrerSkoletrin)
+				knapContainer.appendChild(btn)
+				console.log("det her er knap ", btn)
+			})
+			return
+		}
+
+		function filtrerSkoletrin() {
+			filter = this.dataset.kategori;
+			document.querySelector(".valgt").classList.remove("valgt");
+			this.classList.add("valgt");
 			visSkoletrin();
 		}
 
