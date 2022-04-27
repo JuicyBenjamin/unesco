@@ -23,24 +23,31 @@ get_header();
 	</article>
 </template>
 <section id="primary" class="content-area">
-	<div class="knapContainer">Her skulle Knapper være</div>
-	<main id="main" class="site-main">
+	<div class="knapContainer"></div>
 		<section id="materiale-container">
 		<p class="loading">Henter indhold</p>
 		</section>
-	</main>
 	<script>
 
 		document.addEventListener("DOMContentLoaded", loadJSON);
 
 		const url = "https://vinterfjell.dk/kea/09_cms/unesco/wp-json/wp/v2/posts?categories=36&_embed";
+		const catUrl = "https://vinterfjell.dk/kea/09_cms/unesco/wp-json/wp/v2/categories";
 		let skoletrin;
+		let knapKategori;
 		let filter = "alle";
 		let skoletrinSomKanFiltreres = [];
-		
+		const urlParams = new URLSearchParams(window.location.search);
+		const id = urlParams.get("id");
+		if (id != null) {
+			filter = id;
+		}
+
 		async function loadJSON() {
 			const JSONData = await fetch(url);
+			const catData = await fetch(catUrl);
 			skoletrin = await JSONData.json();
+			knapKategori = await catData.json();
 
 			// Tilføjer kategorierne til array'en skoletrinSomKanFiltreres. Udelukker kategorien "Undervisningsmaterialer" som har id af 36.
 			skoletrin.forEach((post) => {
@@ -57,11 +64,18 @@ get_header();
 
 		function tilfojKnapper() {
 			let knapContainer = document.querySelector(".knapContainer");
-			skoletrinSomKanFiltreres.forEach((kategori) => {
-				const btn = document.createElement("button")
-				btn.addEventListener("click", filtrerSkoletrin)
-				knapContainer.appendChild(btn)
-				console.log("det her er knap ", btn)
+			knapContainer.innerHTML += '<button class="valgt filter" data-kategori="36">Alle</button>'
+			skoletrinSomKanFiltreres.forEach((knap) => {
+				knapKategori.forEach((kategori) => {
+					if(knap == kategori.id) {
+						knapContainer.innerHTML += `<button class="filter" data-kategori="${kategori.id}">${kategori.name}</button>`;
+					}
+				})
+				const btnEvent = () => {
+					document.querySelectorAll(".knapContainer button").forEach(btn => {
+						btn.addEventListener("click", filtrerSkoletrin)
+				})}
+				btnEvent()
 			})
 			return
 		}
@@ -74,29 +88,27 @@ get_header();
 		}
 
 		function visSkoletrin() {
-			const main = document.querySelector("main");
+			const main = document.querySelector("#materiale-container");
 			const template = document.querySelector("template").content;
 			main.textContent = "";
 			skoletrin.forEach((kategorier) => {
-				//if (filter == kategorier.kategori || filter == "alle") {
-				console.log("Vi hopper ind i loopet for hver af posts")
-				const klon = template.cloneNode(true);
-				klon.querySelector("h2").textContent = kategorier.title.rendered;
-				klon.querySelector(".beskrivelse").innerHTML = kategorier.excerpt.rendered;
-				klon.querySelector(".billede").src = kategorier._embedded['wp:featuredmedia'][0].link;
-				klon.querySelector(".billede").alt = kategorier.alttag;
-				// 	klon
-				// 		.querySelector("article")
-				// 		.addEventListener("click", () => visOpskrift(kategorier));
-				main.appendChild(klon);
-				// }
-			//};
-		})};
+				if (kategorier.categories.includes(parseInt(filter)) || filter == "alle") {
+					console.log(kategorier.categories)
+					const klon = template.cloneNode(true);
+					klon.querySelector("h2").textContent = kategorier.title.rendered;
+					klon.querySelector(".beskrivelse").innerHTML = kategorier.excerpt.rendered;
+					klon.querySelector(".billede").src = kategorier._embedded['wp:featuredmedia'][0].link;
+					klon.querySelector("article").addEventListener("click", () => visArtikel(kategorier));
+					main.appendChild(klon);
+				};
+			})
+			return
+		};
 
-		// const visOpskrift = (opskrift) => {
-		// 	console.log(`Dette er den opskrift der blev klikket på ${opskrift.id}`);
-		// 	location.href = `opskrift.html?id=${opskrift._id}`;
-		// };
+		const visArtikel = (artikel) => {
+			console.log(artikel);
+			location.href = artikel.link;
+		};
 
 	</script>
 </section>
