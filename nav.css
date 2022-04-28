@@ -14,27 +14,79 @@ main {
 nav {
   background: var(--main-blue);
 }
+.menu li,
+.menu a {
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* opacity: 1; */
+  transform-origin: top center;
+  transition: all 0.25s ease-out;
+  text-decoration: underline;
+}
+
+.menu .sub-menu {
+  background: var(--secondary-blue);
+  margin: 5px 0 0 10px;
+  padding: 10px;
+}
+
+.sub-menu li {
+  margin-bottom: 10px;
+  color: hsla(0, 0%, 0%, 0.8);
+  font-size: 15px;
+}
+/* til burger start */
+.hidden {
+  /* opacity: 0; */
+  display: none;
+  transition: all 0.25s ease-out;
+  transform-origin: top center;
+}
+#menuknap {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  z-index: 13;
+  font-size: 1.5rem;
+  color: black;
+}
+/* til burger slut */
 
 @media (min-width: 1000px) {
-  .nav-container {
+  /* til burger start */
+  .hidden {
     display: flex;
-    justify-content: space-between;
+    transform: none;
+  }
+  #menuknap {
+    display: none;
+  }
+  /* til burger slut */
+  .nav-container {
     align-items: center;
-    padding: 20px 60px;
   }
 
   .menu {
-    display: flex;
     gap: 20px;
+    flex-direction: row;
   }
 
   .menu li,
   .menu a {
-    list-style: none;
-    font-family: "Roboto", sans-serif;
-    font-size: 18px;
-    text-decoration: none;
-    color: #000;
     position: relative;
     display: inline-block;
   }
@@ -67,6 +119,8 @@ nav {
   .upper-menu a {
     z-index: 10;
     padding: 10px;
+    min-width: 90px;
+    text-align: center;
   }
 
   .menu .sub-menu {
@@ -76,15 +130,17 @@ nav {
     list-style: none;
     gap: 5px;
     background: var(--secondary-blue);
-    min-width: 100%;
+    width: 100%;
     z-index: 5;
-    padding-top: 60px;
     border-radius: 5px;
+    margin: 0;
+    padding: 60px 0 0 0;
   }
 
   .sub-menu li {
-    color: hsla(0, 0%, 0%, 0.8);
-    font-size: 15px;
+    word-wrap: break-word;
+    width: 100%;
+    margin-bottom: 0;
   }
 
   .upper-menu:hover .sub-menu {
