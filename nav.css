@@ -147,24 +147,4 @@ nav {
     display: flex;
     flex-direction: column;
   }
-
-  /* FOOTER START */
-
-  footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: var(--main-blue);
-    padding: 50px 60px;
-    font-family: helvetica;
-  }
-
-  .footer-content {
-    max-width: 200px;
-  }
-
-  footer p {
-    margin-bottom: 10px;
-    line-height: 22px;
-  }
 }
