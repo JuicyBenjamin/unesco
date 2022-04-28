@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  --main-blue: #b1e6f3;
+  --secondary-blue: #c3f3ff;
+}
+
+#primary-menu-list {
+  background: var(--main-blue);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+}
+#primary-menu-list li,
+#primary-menu-list a {
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  color: #000;
+}
+
+#primary-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* opacity: 1; */
+  transform-origin: top center;
+  transition: all 0.25s ease-out;
+  text-decoration: underline;
+}
+
+#primary-menu-list .sub-menu {
+  background: var(--secondary-blue);
+  margin: 5px 0 0 10px;
+  padding: 10px;
+}
+
+.sub-menu li {
+  margin-bottom: 10px;
+  color: hsla(0, 0%, 0%, 0.8);
+  font-size: 15px;
+}
+/* til burger start */
+.hidden {
+  /* opacity: 0; */
+  display: none;
+  transition: all 0.25s ease-out;
+  transform-origin: top center;
+}
+#menuknap {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  z-index: 13;
+  font-size: 1.5rem;
+  color: black;
+}
+/* til burger slut */
+
+@media (min-width: 1000px) {
+  /* til burger start */
+  .hidden {
+    display: flex;
+    transform: none;
+  }
+  #menuknap {
+    display: none;
+  }
+  /* til burger slut */
+  .nav-container {
+    align-items: center;
+  }
+
+  #primary-menu-list {
+    gap: 20px;
+    flex-direction: row;
+  }
+
+  #primary-menu-list li,
+  #primary-menu-list a {
+    position: relative;
+    display: inline-block;
+  }
+
+  #primary-menu-list a:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: rgb(0, 0, 0, 0.6);
+    transform-origin: bottom center;
+    transition: 0.25s ease-out;
+  }
+
+  #primary-menu-list a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom center;
+  }
+
+  #primary-menu-list a:hover {
+    color: rgb(0, 0, 0, 0.8);
+  }
+
+  .upper-menu {
+    position: relative;
+  }
+  .upper-menu a {
+    z-index: 10;
+    padding: 10px;
+    min-width: 90px;
+    text-align: center;
+  }
+
+  #primary-menu-list .sub-menu {
+    position: absolute;
+    top: -10px;
+    display: none;
+    list-style: none;
+    gap: 5px;
+    background: var(--secondary-blue);
+    width: 100%;
+    z-index: 5;
+    border-radius: 5px;
+    margin: 0;
+    padding: 60px 0 0 0;
+  }
+
+  .sub-menu li {
+    word-wrap: break-word;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .upper-menu:hover .sub-menu {
+    display: flex;
+    flex-direction: column;
+  }
+}
