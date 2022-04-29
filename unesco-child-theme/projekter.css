@@ -44,14 +44,18 @@ p {
   max-width: 80%;
   padding: 20px;
 }
-
-@media (min-width: 750px) {
+@media (min-width: 1000px) {
   .innledning_bilde {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
 
+  .innledning_bilde img:nth-child(1) {
+    grid-column: span 2;
+  }
+}
+@media (min-width: 750px) {
   .innledning_bilde img:nth-child(1) {
     grid-column: span 2;
   }
