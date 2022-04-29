@@ -23,6 +23,8 @@ get_header();
 	</article>
 </template>
 <section id="primary" class="content-area">
+	<h1>Undervisningsmaterialer</h1>
+	<p>På denne side kan du se alt det undervisningsmateriele Unesco tilbyder. Klik på en af knapperne herunder for at filtrere efter uddannelsesniveau.</p>
 	<div class="knapContainer"></div>
 		<section id="materiale-container">
 		<p class="loading">Henter indhold</p>

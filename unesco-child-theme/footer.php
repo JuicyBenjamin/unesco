@@ -1,3 +1,6 @@
+<head>
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/footer.css">
+</head>
 <?php
 /**
  * The template for displaying the footer
@@ -16,64 +19,28 @@
 		</div><!-- #primary -->
 	</div><!-- #content -->
 
-	<?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
-
-	<footer id="colophon" class="site-footer">
-
-		<?php if ( has_nav_menu( 'footer' ) ) : ?>
-			<nav aria-label="<?php esc_attr_e( 'Secondary menu', 'twentytwentyone' ); ?>" class="footer-navigation">
-				<ul class="footer-navigation-wrapper">
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'footer',
-							'items_wrap'     => '%3$s',
-							'container'      => false,
-							'depth'          => 1,
-							'link_before'    => '<span>',
-							'link_after'     => '</span>',
-							'fallback_cb'    => false,
-						)
-					);
-					?>
-				</ul><!-- .footer-navigation-wrapper -->
-			</nav><!-- .footer-navigation -->
-		<?php endif; ?>
-		<div class="site-info">
-			<div class="site-name">
-				<?php if ( has_custom_logo() ) : ?>
-					<div class="site-logo"><?php the_custom_logo(); ?></div>
-				<?php else : ?>
-					<?php if ( get_bloginfo( 'name' ) && get_theme_mod( 'display_title_and_tagline', true ) ) : ?>
-						<?php if ( is_front_page() && ! is_paged() ) : ?>
-							<?php bloginfo( 'name' ); ?>
-						<?php else : ?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-						<?php endif; ?>
-					<?php endif; ?>
-				<?php endif; ?>
-			</div><!-- .site-name -->
-
-			<?php
-			if ( function_exists( 'the_privacy_policy_link' ) ) {
-				the_privacy_policy_link( '<div class="privacy-policy">', '</div>' );
-			}
-			?>
-
-			<div class="powered-by">
-				<?php
-				printf(
-					/* translators: %s: WordPress. */
-					esc_html__( 'Proudly powered by %s.', 'twentytwentyone' ),
-					'<a href="' . esc_url( __( 'https://wordpress.org/', 'twentytwentyone' ) ) . '">WordPress</a>'
-				);
-				?>
-			</div><!-- .powered-by -->
-
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-
-</div><!-- #page -->
+<footer>
+    <div class="footer-content">
+      <div class="logo">
+        <a href="nav.html"> <img src="https://vinterfjell.dk/kea/09_cms/unesco/wp-content/uploads/2022/04/unesco-logo.webp" alt="" /></a>
+      </div>
+    </div>
+    <div class="footer-content">
+      <p>National koordinator <br>Poul Erik Christoffersen</p>
+      <p>pec@ungdomsbyen.dk<br>Tlf: +45 4491 4646<br>
+        Direkte: +45 2174 4275</p>
+    </div>
+    <div class="footer-content">
+      <p><a href="x">facebook</a> | <a href="x">linkedin</a></p>
+      <address>
+        <p>Ungdomsbyen<br>c/o Global Platform<br>Faelledvej 12C, 3. sal<br>2200 Copenhagen N<br>Denmark</vr>
+        </p>
+      </address>
+    </div>
+    <div class="footer-content">
+      <p>Tilmeld dig vores nyhedsbrev. Du kan tilmelde dig her.</p>
+    </div>
+  </footer>
 
 <?php wp_footer(); ?>
 

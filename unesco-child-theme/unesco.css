@@ -2,18 +2,45 @@ img {
   width: 100%;
 }
 
+.content-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.content-area h1 {
+  text-align: center;
+}
 .knapContainer {
   display: flex;
   justify-content: center;
   gap: 2rem;
 }
 
+.knapContainer button {
+  background-color: #beddb0 !important;
+  border: none !important;
+  color: rgb(0, 0, 0) !important;
+  padding: 16px !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  margin-top: 10px !important;
+  transition-duration: 0.4s !important;
+  cursor: pointer !important;
+}
+
+.knapContainer button:hover {
+  background-color: #d9e3da !important;
+  color: #000000 !important;
+}
+
 #materiale-container {
   margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 20px;
-  padding: 2rem;
+  gap: 2rem;
 }
 
 .billede {
@@ -22,6 +49,8 @@ img {
 }
 
 article {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 1rem;
   margin-top: 0px !important;
   display: flex;
   flex-direction: column;
