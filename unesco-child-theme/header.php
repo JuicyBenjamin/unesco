@@ -19,6 +19,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<?php wp_head(); ?>
 	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/nav.css">
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/bliv_skole.css">
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/hjem.css">
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/sog_tilskud.css">
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/projekter.css">
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/unesco.css">
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/skoler.css">
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/footer.css">
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/dry.css">
 </head>
 
 <body <?php body_class(); ?>>

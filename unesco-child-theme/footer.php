@@ -1,6 +1,3 @@
-<head>
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/footer.css">
-</head>
 <?php
 /**
  * The template for displaying the footer

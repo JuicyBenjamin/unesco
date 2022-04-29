@@ -10,7 +10,8 @@ img {
   gap: 2rem;
 }
 
-.content-area h1 {
+.content-area h1,
+p {
   text-align: center;
 }
 .knapContainer {

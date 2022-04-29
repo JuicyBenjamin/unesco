@@ -1,7 +1,3 @@
-<head>
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/skoler.css">
-</head>
-
 <?php
 /**
  * The template for displaying all single posts
