@@ -7,6 +7,10 @@ a:focus {
   color: black !important;
 }
 
+.sub-menu-toggle {
+  display: none !important;
+}
+
 #site-navigation {
   background: var(--main-blue) !important;
   display: flex;
@@ -69,15 +73,18 @@ a:focus {
     background: rgb(0, 0, 0, 0.6);
     transform-origin: bottom center;
     transition: 0.25s ease-out;
+    text-decoration: none;
   }
 
   #primary-menu-list a:hover:after {
     transform: scaleX(1);
     transform-origin: bottom center;
+    text-decoration: none;
   }
 
   #primary-menu-list a:hover {
     color: rgb(0, 0, 0, 0.8);
+    text-decoration: none;
   }
 
   .primary-navigation > div > .menu-wrapper > li > .sub-menu {
@@ -93,15 +100,19 @@ a:focus {
     margin: 0;
     padding: 60px 0 0 0;
     z-index: 1;
+    text-decoration: none;
   }
   .primary-navigation > div > .menu-wrapper > li > .sub-menu li {
     background: none;
+    text-decoration: none;
   }
   .primary-navigation .sub-menu {
     border: none;
+    text-decoration: none;
   }
   .primary-navigation > div > .menu-wrapper > li > .sub-menu::before,
   .primary-navigation > div > .menu-wrapper > li > .sub-menu::after {
     border: none;
+    text-decoration: none;
   }
 }

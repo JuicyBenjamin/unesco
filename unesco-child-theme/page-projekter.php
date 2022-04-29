@@ -22,7 +22,6 @@ get_header();
       src="https://vinterfjell.dk/kea/09_cms/unesco/wp-content/uploads/2022/04/oily-bird-wikipedia-1024x681-2.webp"
       alt=""
     />
-    <div class="innledning_bilde_grid">
       <img
         src="https://vinterfjell.dk/kea/09_cms/unesco/wp-content/uploads/2022/04/ocean.webp"
         alt=""
@@ -31,7 +30,6 @@ get_header();
         src="https://vinterfjell.dk/kea/09_cms/unesco/wp-content/uploads/2022/04/pexels-photo-416528.webp"
         alt=""
       />
-    </div>
   </div>
         
   <div class="innledning_tekst">

@@ -27,7 +27,7 @@ get_header();
             </p>
           </div>
           <div class="col2">
-            <img src="bilder/Konference_25_Lowres.JPG" alt="bilde1" />
+            <img src="https://vinterfjell.dk/kea/09_cms/unesco/wp-content/uploads/2022/04/element5-digital-352043-scaled.jpg" alt="bilde1" />
           </div>
         </div>
       </section>
