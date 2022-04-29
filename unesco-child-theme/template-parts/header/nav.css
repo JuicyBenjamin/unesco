@@ -8,14 +8,14 @@ html {
   --secondary-blue: #c3f3ff;
 }
 
-main {
-  margin: 50px;
-}
-nav {
+#primary-menu-list {
   background: var(--main-blue);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
 }
-.menu li,
-.menu a {
+#primary-menu-list li,
+#primary-menu-list a {
   list-style: none;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
@@ -23,12 +23,7 @@ nav {
   color: #000;
 }
 
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 60px;
-}
-.menu {
+#primary-menu-list {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -38,7 +33,7 @@ nav {
   text-decoration: underline;
 }
 
-.menu .sub-menu {
+#primary-menu-list .sub-menu {
   background: var(--secondary-blue);
   margin: 5px 0 0 10px;
   padding: 10px;
@@ -80,18 +75,18 @@ nav {
     align-items: center;
   }
 
-  .menu {
+  #primary-menu-list {
     gap: 20px;
     flex-direction: row;
   }
 
-  .menu li,
-  .menu a {
+  #primary-menu-list li,
+  #primary-menu-list a {
     position: relative;
     display: inline-block;
   }
 
-  .menu a:after {
+  #primary-menu-list a:after {
     content: "";
     position: absolute;
     width: 100%;
@@ -104,12 +99,12 @@ nav {
     transition: 0.25s ease-out;
   }
 
-  .menu a:hover:after {
+  #primary-menu-list a:hover:after {
     transform: scaleX(1);
     transform-origin: bottom center;
   }
 
-  .menu a:hover {
+  #primary-menu-list a:hover {
     color: rgb(0, 0, 0, 0.8);
   }
 
@@ -123,7 +118,7 @@ nav {
     text-align: center;
   }
 
-  .menu .sub-menu {
+  #primary-menu-list .sub-menu {
     position: absolute;
     top: -10px;
     display: none;
