@@ -46,9 +46,22 @@ p {
 }
 
 @media (min-width: 750px) {
+  .innledning_bilde {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .innledning_bilde img:nth-child(1) {
+    grid-column: span 2;
+  }
+  .innledning_bilde img {
+    aspect-ratio: 3/2;
+    width: 100%;
+  }
   #prosjekt_innledning {
     display: grid;
-    grid-column-gap: 20px;
+    /* grid-column-gap: 20px; */
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     padding: 50px;
