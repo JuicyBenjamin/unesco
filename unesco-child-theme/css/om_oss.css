@@ -1,0 +1,17 @@
+.om_oss_innhold {
+  padding-top: 50px;
+}
+
+.om_oss_tekst_quote {
+  padding: 10px;
+  text-align: center;
+}
+
+@media (min-width: 750px) {
+  #om_oss_innhold {
+    gap: 10px;
+    padding: 20px;
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+}

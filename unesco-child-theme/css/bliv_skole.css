@@ -1,74 +1,56 @@
-* {
-  margin: 0%;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100% !important;
-  max-height: 100% !important;
-}
-
-h1 {
-  font-size: 3rem;
-  margin-top: 10px;
-  margin-left: 20px;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-p {
-  font-size: 1rem;
-}
-
-body,
-html {
-  height: 100%;
-  margin: 0;
-  font-family: "Nunito", sans-serif;
-  background-color: #ffffff;
-}
-
-#first_section h1 {
+#skole_first_section h1 {
   text-align: center;
   padding-top: 3%;
 }
 
-#first_section .section_wrapper .col1,
+#skole_first_section .section_wrapper .col1,
 .col2 {
   margin: 20px;
 }
 
-#second_section .section_wrapper {
+#skole_second_section {
+  display: flex;
+  justify-content: start;
+}
+
+#skole_second_section .section_wrapper {
   background-color: #beddb0;
+  width: 100%;
   /*   margin-top: 5%; */
 }
 
-#second_section .section_wrapper h2,
+#skole_second_section .section_wrapper > *,
+#skole_third_section .section_wrapper > * {
+  max-width: 65ch;
+  margin: 0;
+  padding: 2rem;
+}
+
+#skole_second_section .section_wrapper h2,
 p {
   margin: 20px;
 }
 
-#second_section .section_wrapper h2 {
+#skole_second_section .section_wrapper h2 {
   padding-bottom: 1%;
 }
 
-#third_section .section_wrapper {
-  background-color: #beddb0;
+#skole_third_section {
+  display: flex;
+  justify-content: right;
 }
 
-#third_section .section_wrapper h3,
+#skole_third_section .section_wrapper {
+  background-color: #beddb0;
+  width: 100%;
+}
+
+#skole_third_section .section_wrapper h3,
 p {
   margin: 20px;
 }
 
-#third_section .section_wrapper h3 {
+#skole_third_section .section_wrapper h3 {
   padding-bottom: 1%;
 }
 
@@ -101,58 +83,33 @@ select {
   box-sizing: border-box;
 }
 
-.button {
-  background-color: #beddb0;
-  border: none;
-  color: rgb(0, 0, 0);
-  padding: 10px 32px;
-  text-align: left;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 10px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  font-family: "Titillium Web", sans-serif;
-}
-
-.button:hover {
-  background-color: #545d63;
-  color: rgb(255, 255, 255);
-}
-
 @media (min-width: 900px) {
-  #first_section .section_wrapper .col1,
+  #skole_first_section .section_wrapper .col1,
   .col2 {
-    padding-left: 30%;
-    padding-right: 30%;
     padding-top: 1%;
   }
 
-  #second_section .section_wrapper {
+  #skole_second_section .section_wrapper {
     display: grid;
     grid-template-rows: auto auto;
     padding-top: 3%;
     padding-left: 20px;
-    padding-right: 60%;
     background-color: #beddb0;
     margin-top: 5%;
   }
 
-  #third_section .section_wrapper {
+  #skole_third_section .section_wrapper {
     display: grid;
     grid-template-rows: auto auto;
     padding-top: 3%;
     padding-left: 20px;
   }
 
-  #third_section .section_wrapper h3 {
-    padding-left: 50%;
+  #skole_third_section .section_wrapper h3 {
     padding-right: 20px;
   }
 
-  #third_section .section_wrapper p {
-    padding-left: 50%;
+  #skole_third_section .section_wrapper p {
     padding-right: 20px;
   }
 

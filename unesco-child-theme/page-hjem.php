@@ -14,7 +14,7 @@ get_header();
 
   <div id="content">
     <h1>UNESCO</h1>
-    <section id="first_section">
+    <section id="hjem_first_section">
       <div class="section_wrapper">
         <div class="col1">
           <h2>Hvad er Unesco?</h2>
@@ -34,7 +34,7 @@ get_header();
       </div>
     </section>
 
-    <section id="second_section">
+    <section id="hjem_second_section">
       <div class="section_wrapper">
         <div class="col1">
           <h2>UNESCO som organisation</h2>
@@ -54,7 +54,7 @@ get_header();
       </div>
     </section>
 
-    <section id="third_section">
+    <section id="hjem_third_section">
         <div class="section_wrapper">
             <div class="col1">
                 <h2>UNESCO Verdensmålsskoler</h2>
@@ -71,7 +71,7 @@ get_header();
             <img src="https://vinterfjell.dk/kea/09_cms/unesco/wp-content/uploads/2022/04/capturing-the-human-heart-227847-1-scaled.jpg" alt="bilde" />
         </div>
     </section>
-    <section id="fourth_section">
+    <section id="hjem_fourth_section">
         <div class="section_wrapper">
             <div class="quote">
                 <h3>“Det globale medborgerskab stopper ikke ved den danske grænse og Europa.“
@@ -82,7 +82,7 @@ get_header();
         </div>
     </section>
     
-    <section id="fifth_section">
+    <section id="hjem_fifth_section">
         <div class="section_wrapper">
             <div class="col1">
                 <p>Som UNESCO Verdensmålsskole får man konkret inspiration til, hvordan man udvikler undervisning med udgangspunkt i verdensmålene. I Danmark er der 80 uddannelsesinstitutioner i netværket, og det tæller både grundskoler, efterskoler, gymnasier, erhvervsskoler, professionshøjskoler samt HF og VUC. Børne- og Undervisningsministeriet støtter det danske netværk med en årlig bevilling.<br> <br> Hjemmesiden giver dig mulighed for at lære mere om netværket, mens du udforsker spændende undervisningsmateriale og bliver inspireret af de mange projekter, som de danske UNESCO Verdensmålsskoler løbende deler.</p>
@@ -96,7 +96,7 @@ get_header();
               </button>
             </div>
     </section>
-    <section id="sixth_section">
+    <section id="hjem_sixth_section">
         <div class="section_wrapper">
             <img src="https://vinterfjell.dk/kea/09_cms/unesco/wp-content/uploads/2022/04/Artboard-1_1.png" alt="bilde" />
         </div>

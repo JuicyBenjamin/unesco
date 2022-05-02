@@ -42,10 +42,10 @@ a:focus {
 
 .site-logo {
   z-index: 10;
-  width: auto;
+  width: auto !important;
   position: absolute;
-  top: 0;
-  left: 10px;
+  padding-top: 1rem !important;
+  border: none !important;
 }
 
 /* TIL DESKTOP */

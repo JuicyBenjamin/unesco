@@ -8,10 +8,6 @@
  */
 ?>
 
-<head>
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/unesco.css">
-</head>
-
 <footer>
     <div class="footer-content">
       <div class="logo">

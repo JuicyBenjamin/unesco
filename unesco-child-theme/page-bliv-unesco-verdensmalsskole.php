@@ -12,7 +12,7 @@
 get_header();
 ?>
 
- <section id="first_section">
+ <section id="skole_first_section">
         <h1>Bliv UNESCO verdensmålsskole</h1>
         <div class="section_wrapper">
           <div class="col1">
@@ -28,7 +28,7 @@ get_header();
         </div>
       </section>
 
-      <section id="second_section">
+      <section id="skole_second_section">
         <div class="section_wrapper">
           <h2>Ansøgning om deltagelse i ASP-netværk i Danmark:</h2>
           <p>
@@ -51,7 +51,7 @@ get_header();
         </div>
       </section>
 
-      <section id="third_section">
+      <section id="skole_third_section">
         <div class="section_wrapper">
           <h3>
             Udvælgelsen af skoler til deltagelse i ASP-netværket i Danmark vil

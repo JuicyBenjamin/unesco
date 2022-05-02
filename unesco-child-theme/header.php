@@ -18,15 +18,16 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<?php wp_head(); ?>
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/nav.css">
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/bliv_skole.css">
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/hjem.css">
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/sog_tilskud.css">
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/projekter.css">
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/unesco.css">
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/skoler.css">
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/footer.css">
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/dry.css">
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/nav.css">
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/bliv_skole.css">
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/hjem.css">
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/sog_tilskud.css">
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/projekter.css">
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/unesco.css">
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/skoler.css">
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/footer.css">
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/dry.css">
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/om-oss.css">
 </head>
 
 <body <?php body_class(); ?>>
