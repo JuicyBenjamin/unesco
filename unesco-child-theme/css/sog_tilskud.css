@@ -14,14 +14,9 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
   }
-  #third_section .section_wrapper img {
-    aspect-ratio: 1;
-    object-fit: cover;
-    width: 100%;
-  }
-  #skole_first_section .section_wrapper .col1,
-  .col2 {
-    margin: 0 !important;
-    padding: 0 !important;
+  #tilskud_third_section .section_wrapper img {
+    aspect-ratio: 1/1 !important;
+    object-fit: cover !important;
+    width: 100% !important;
   }
 }

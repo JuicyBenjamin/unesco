@@ -12,7 +12,7 @@
 get_header();
 ?>
 
-    <h1>Om oss</h1>
+    <h1>Om os</h1>
 
       <section id="om_oss_innhold">
         <div class="om_oss_bilde">
