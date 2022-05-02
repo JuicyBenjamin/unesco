@@ -1,23 +1,3 @@
-.button {
-  background-color: #beddb0;
-  border: none;
-  color: rgb(0, 0, 0);
-  padding: 10px 32px;
-  text-align: left;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 10px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  font-family: "Titillium Web", sans-serif;
-}
-
-.button:hover {
-  background-color: #545d63;
-  color: rgb(255, 255, 255);
-}
-
 #tilskud_second_section .section_wrapper {
   text-align: center;
 }
@@ -31,6 +11,6 @@
 
   #tilskud_third_section .section_wrapper {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }

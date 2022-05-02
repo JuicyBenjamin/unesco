@@ -12,7 +12,7 @@
 get_header();
 ?>
 <h1>Søg UNESCO tilskud</h1>
-      <section id="first_section">
+      <section id="tilskud_first_section">
         <div class="section_wrapper">
           <div class="col1">
             <p>
@@ -54,7 +54,7 @@ get_header();
           </div>
         </div>
       </section>
-      <section id="second_section">
+      <section id="tilskud_second_section">
         <div class="section_wrapper">
           <div class="col1">
             <button class="button">Hent ansøgningsskema</button>
@@ -65,7 +65,7 @@ get_header();
         </div>
       </section>
 
-      <section id="third_section">
+      <section id="tilskud_third_section">
         <div class="section_wrapper">
           <div class="col1">
             <img src="https://vinterfjell.dk/kea/09_cms/unesco/wp-content/uploads/2022/04/rawpixel-com-284723-scaled.jpg" alt="bilde1" />
